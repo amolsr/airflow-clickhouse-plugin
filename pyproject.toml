@@ -9,7 +9,7 @@ name = "airflow-clickhouse-plugin"
 version = "1.4.0"
 description = "airflow-clickhouse-plugin — Airflow plugin to execute ClickHouse commands and queries"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.7"
 license = { text = "MIT License" }
 authors = [
     { name = "Anton Bryzgalov, Viktor Taranenko", email = "tony.bryzgaloff@gmail.com" },
