@@ -5,6 +5,7 @@ from itertools import islice
 import clickhouse_driver
 from airflow.hooks.base import BaseHook
 from airflow.models import Connection
+from typing_extensions import TypedDict
 
 # annotated according to clickhouse_driver.Client.execute comments
 _ParamT = t.NewType('_ParamT', t.Union[list, tuple, dict])
@@ -28,7 +29,7 @@ ExecuteReturnT = t.NewType(
 )
 
 
-class ExternalTable(t.TypedDict):
+class ExternalTable(TypedDict):
     name: str
     structure: t.List[t.Tuple[str, str]]
     data: t.List[t.Dict[str, t.Any]]
